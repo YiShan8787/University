@@ -1,0 +1,23 @@
+[
+null,
+{"id":1,"animationId":6,"description":"斷開鎖鏈，燒毀","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0},{"code":43,"dataId":11,"value":1}],"iconIndex":97,"name":"美江寶劍","note":"","params":[0,0,100,0,0,0,0,0],"price":0,"wtypeId":2},
+{"id":2,"animationId":6,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":99,"name":"斧","note":"","params":[0,0,10,0,0,0,0,0],"price":500,"wtypeId":4},
+{"id":3,"animationId":1,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":101,"name":"杖","note":"","params":[0,0,10,0,0,0,0,0],"price":500,"wtypeId":6},
+{"id":4,"animationId":11,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":102,"name":"弓","note":"","params":[0,0,10,0,0,0,0,0],"price":500,"wtypeId":7},
+{"id":5,"animationId":2,"description":"出門在外必備好夥伴","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":110,"name":"球棒","note":"","params":[0,0,100,0,0,0,0,0],"price":0,"wtypeId":0},
+{"id":6,"animationId":0,"description":"索龍佩刀","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"和道一文字","note":"","params":[0,0,123,0,0,0,0,0],"price":0,"wtypeId":13},
+{"id":7,"animationId":0,"description":"鷹眼所配的刀","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"大刀黑夜","note":"","params":[0,0,500,0,0,0,0,0],"price":0,"wtypeId":13},
+{"id":8,"animationId":0,"description":"羅佩刀","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"鬼哭","note":"","params":[0,0,456,0,0,0,0,0],"price":0,"wtypeId":13},
+{"id":9,"animationId":0,"description":"達斯奇佩刀","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"時雨","note":"","params":[0,0,500,0,0,0,0,0],"price":0,"wtypeId":13},
+{"id":10,"animationId":0,"description":"索龍佩刀","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"三代鬼撤","note":"","params":[0,0,500,0,0,0,0,0],"price":0,"wtypeId":13},
+{"id":11,"animationId":0,"description":"索龍佩刀","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"雪走","note":"","params":[0,0,500,0,0,0,0,0],"price":0,"wtypeId":13},
+{"id":12,"animationId":0,"description":"索龍佩刀","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"秋水","note":"","params":[0,0,500,0,0,0,0,0],"price":0,"wtypeId":13},
+{"id":13,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"+8 猛爆性肝炎","note":"","params":[0,0,444,0,0,0,0,0],"price":0,"wtypeId":14},
+{"id":14,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"+10 爆掉的肝","note":"","params":[0,0,500,0,0,0,0,0],"price":0,"wtypeId":14},
+{"id":15,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0,"wtypeId":0},
+{"id":16,"animationId":0,"description":"好吃~","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"飛雷神口香糖","note":"","params":[0,0,70,0,0,0,0,0],"price":0,"wtypeId":1},
+{"id":17,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0,"wtypeId":0},
+{"id":18,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0,"wtypeId":0},
+{"id":19,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0,"wtypeId":0},
+{"id":20,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0,"wtypeId":0}
+]
