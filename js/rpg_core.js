@@ -1748,14 +1748,13 @@ Graphics._createCanvas = function() {
 /**
  * @static
  * @method _updateCanvas
- * @private這裡是zindex
+ * @private
  */
 Graphics._updateCanvas = function() {
     this._canvas.width = this._width;
     this._canvas.height = this._height;
     this._canvas.style.zIndex = 1;
     this._centerElement(this._canvas);
-	
 };
 
 /**
