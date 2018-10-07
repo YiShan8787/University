@@ -1675,6 +1675,7 @@ Window_MenuCommand.prototype.isGameEndEnabled = function() {
 Window_MenuCommand.prototype.processOk = function() {
     Window_MenuCommand._lastCommandSymbol = this.currentSymbol();
     Window_Command.prototype.processOk.call(this);
+	
 };
 
 Window_MenuCommand.prototype.selectLast = function() {
