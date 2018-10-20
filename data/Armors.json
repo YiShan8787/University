@@ -9,6 +9,6 @@ null,
 {"id":7,"atypeId":1,"description":"","etypeId":5,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"藍白拖","note":"","params":[0,0,0,10,0,0,0,0],"price":0},
 {"id":8,"atypeId":1,"description":"","etypeId":5,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"拖鞋","note":"","params":[0,0,0,10,0,0,0,0],"price":0},
 {"id":9,"atypeId":1,"description":"","etypeId":4,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"我愛ntou","note":"","params":[0,0,0,10,0,0,0,0],"price":0},
-{"id":10,"atypeId":0,"description":"","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0},
+{"id":10,"atypeId":3,"description":"資訊就是知識，知識就是力量","etypeId":4,"traits":[{"code":22,"dataId":1,"value":0.05}],"iconIndex":139,"name":"資工系服","note":"","params":[0,0,0,50,0,50,0,0],"price":0},
 {"id":11,"atypeId":0,"description":"","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0}
 ]
