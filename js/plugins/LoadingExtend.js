@@ -158,7 +158,7 @@
         return (parseInt(convertEscapeCharacters(arg)) || 0).clamp(min, max);
     };
 
-    var convertEscapeCharacters = function(text) {
+    var convertEscapeCharacters = function(text) {//出現可以更改的清單
         if (isNotAString(text)) text = '';
         var windowLayer = SceneManager._scene._windowLayer;
         return windowLayer ? windowLayer.children[0].convertEscapeCharacters(text) : text;
