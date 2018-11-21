@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=0.25, maximum-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <style>
          body {
             background-color: #ffffff;
@@ -37,6 +41,7 @@
             color: white;
             float: down;
          }
+         
       </style>
       <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
       <link rel="stylesheet" href="css/menu.min.css">
@@ -46,8 +51,13 @@
         <link rel="icon" href="icon/icon.png" type="image/png">
         <link rel="apple-touch-icon" href="icon/icon.png">
         <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
+
+        
         <title>University由你玩四年</title>
     </head>
+        <!--
+        drop-down menu
+        -->  
     <body style="background-color: black">
    <div class="menu-wrapper" role="navigation">
       <ul class="nav" role="menubar">
@@ -61,9 +71,9 @@
               
               <ul>
                
-               <li role="menuitem"><a href="#">Chapter_One</a></li>
-               <li role="menuitem"><a href="#">Chapter_Two</a></li>
-               <li role="menuitem"><a href="#">Chapter_Three</a></li>
+               <li role="menuitem"><a href="#" id="chapter1" class="btn btn-default btn-lg btn-block" rel="popover" >Chapter One</a></li>
+               <li role="menuitem"><a href="#" id="chapter2" class="btn btn-default btn-lg btn-block" rel="popover">Chapter Two</a></li>
+               <li role="menuitem"><a href="#" id="chapter3" class="btn btn-default btn-lg btn-block" rel="popover">Chapter Three</a></li>
       
               </ul>
            
@@ -108,9 +118,9 @@
         <div class="mega-menu" aria-hidden="true" role="menu">
             <div class="nav-column">
               <ul>
-                <li role="menuitem"><a href="#">Submit_bugs</a></li>
+                <li role="menuitem"><a href="#" id="bugs" class="btn btn-default btn-lg btn-block" rel="popover">Submit bugs</a></li>
                 <li role="menuitem"><a href="#">ppt</a></li>
-                
+                <li role="menuitem"><a href="#">How_to_play</a></li>
               </ul>
             </div>
           </div>
@@ -124,6 +134,9 @@
         </li>
       </ul>
     </div>
+        <!--
+        rpg
+        --> 
         <script type="text/javascript" src="js/libs/pixi.js"></script>
         <script type="text/javascript" src="js/libs/fpsmeter.js"></script>
         <script type="text/javascript" src="js/libs/lz-string.js"></script>
@@ -135,9 +148,84 @@
         <script type="text/javascript" src="js/rpg_windows.js"></script>
         <script type="text/javascript" src="js/plugins.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+        
+        <!--
+        bootstrap
+        -->        
+
+        <script>
+        $(function (){ 
+          $("#chapter1").popover({
+            content:'在充滿校園氣息中的遊戲裡，帶著主角一起攻略資工系吧!',
+            //trigger: 'focus',
+            offset: '200%, 100, 200%, 200%',
+            title: '學園篇--序章',
+            trigger: "hover"
+            //width:'500%'
+            //container: 'body'
+        });
+          $("#chapter2").popover({
+
+            content:'奇怪?這裡是哪裡，這些明明就不是資工系該學的阿!請學習一些資工系不會用到的技能，帶主角度過難關',
+            trigger: 'hover',
+            offset: '200%, 100, 200%, 200%',
+            title: '白日夢冒險',
+
+            });
+          $("#chapter3").popover({
+            content:'使用主角單生20年學習到的所有技能，擊敗資工系的妖魔鬼怪',
+            trigger: 'hover',
+            offset: '200%, 100, 200%, 200%',
+            title: '學園篇--終章',
+          });
+          $("#bugs").popover({
+            content:'有bug就接受吧，這個我不打算修喔!!',
+            //trigger: 'focus',
+            offset: '200%, 100, 200%, 200%',
+            //title: '學園篇--序章',
+            trigger: "hover"
+          });
+        });
+
+        //layer js
+        /*$(document).ready(function() {
+            spectrum();
+            setInterval(spectrum, 3000);
+            function spectrum(){
+                var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+                $('#game1').animate({color:hue}, 3000);
+                $('#introduce').animate({color:hue}, 3000);
+            }
+        });
+
+        $("#game1").click(function(event){
+            window.location.href = "game1.html";
+        });
+
+        $("#introduce").click(function(){
+            layer.ready(function(){
+                console.log(123);
+                layer.photos({
+                    photos: {
+                        "title":"",
+                        "id": "intro",
+                        "start": 0,
+                        "data": [{"alt": "1", "pid":"intor1", "src": "introduce/introduce1.jpg", "thumb": "introduce/introduce1.jpg"}
+                                ,{"alt": "2", "pid":"intor2", "src": "introduce/introduce2.jpg", "thumb": "introduce/introduce2.jpg"}]
+                        },
+                    area: ["64%"],
+                    offset: ["5%", "18%"],
+                    anim: 3,
+                    closeBtn: 2,
+                    move: false
+                });
+            });
+        });*/
+        </script>
       
-      
-      
+      <!--
+        three.js
+      -->  
       <div id="info">
          <a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> - <span id="birds"></span> webgl gpgpu birds<br/>
          Select <span id="options"></span> birds<br/>
