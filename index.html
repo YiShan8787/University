@@ -88,8 +88,8 @@
         <div class="mega-menu" aria-hidden="true" role="menu">
             <div class="nav-column">
               <ul>
-                <li role="menuitem"><a href="https://drive.google.com/open?id=1NKQPr2j0jJ0vcus5bbPIDHGIjIISjgpE">Windows/Unix</a></li>
-                <li role="menuitem"><a href="https://drive.google.com/open?id=1V60fD5eizWnjK-jtdOwW-RHzRyVP4JSJ">Mac/ios</a></li>
+                <li role="menuitem"><a href="https://drive.google.com/open?id=1NKQPr2j0jJ0vcus5bbPIDHGIjIISjgpE" class="btn btn-default btn-lg btn-block">Windows/Unix</a></li>
+                <li role="menuitem"><a href="https://drive.google.com/open?id=1V60fD5eizWnjK-jtdOwW-RHzRyVP4JSJ" class="btn btn-default btn-lg btn-block">Mac/ios</a></li>
               </ul>
             </div>
           </div>
@@ -102,10 +102,10 @@
         <div class="mega-menu" aria-hidden="true" role="menu">
             <div class="nav-column">
               <ul>
-                <li role="menuitem"><a href="#">主角</a></li>
-                <li role="menuitem"><a href="#">???</a></li>
-                <li role="menuitem"><a href="#">???</a></li>
-                <li role="menuitem"><a href="#">???</a></li>
+                <li role="menuitem"><a href="#" id="leader" class="btn btn-default btn-lg btn-block">主角</a></li>
+                <li role="menuitem"><a href="#" class="btn btn-default btn-lg btn-block">???</a></li>
+                <li role="menuitem"><a href="#" class="btn btn-default btn-lg btn-block">???</a></li>
+                <li role="menuitem"><a href="#" class="btn btn-default btn-lg btn-block">???</a></li>
               </ul>
             </div>
           </div>
@@ -119,8 +119,8 @@
             <div class="nav-column">
               <ul>
                 <li role="menuitem"><a href="#" id="bugs" class="btn btn-default btn-lg btn-block" rel="popover">Submit bugs</a></li>
-                <li role="menuitem"><a href="#">ppt</a></li>
-                <li role="menuitem"><a href="#">How_to_play</a></li>
+                <li role="menuitem"><a href="#" class="btn btn-default btn-lg btn-block">ppt</a></li>
+                <li role="menuitem"><a href="#" id="how" class="btn btn-default btn-lg btn-block">How to play</a></li>
               </ul>
             </div>
           </div>
@@ -133,6 +133,113 @@
           </form>
         </li>
       </ul>
+    </div>
+    <!--
+    <button id="func1" onclick="func1();" style="top:700px; position: absolute;" >初体验</button>
+    --> 
+    <!-- Button trigger modal -->
+    <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="top:700px; position: absolute;">
+    Launch demo modal
+    </button>-->
+    <!-- Modal -->
+    <div class="modal fade" id="show_leader" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">火爆浪子</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            test132
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="show_chapter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">白日夢冒險</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            奇怪?這裡是哪裡，<br>這些明明就不是資工系該學的阿!<br>請學習一些資工系不會用到的技能，帶主角度過難關
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="show_chapter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">學園篇--終章</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            使用主角單生20年學習到的所有技能，擊敗資工系的妖魔鬼怪
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="show_chapter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">學園篇--序章</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            在充滿校園氣息中的遊戲裡，帶著主角一起攻略資工系吧!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="show_how" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">遊玩方式</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            test
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+      </div>
     </div>
         <!--
         rpg
@@ -155,7 +262,7 @@
 
         <script>
         $(function (){ 
-          $("#chapter1").popover({
+          /*$("#chapter1").popover({
             content:'在充滿校園氣息中的遊戲裡，帶著主角一起攻略資工系吧!',
             //trigger: 'focus',
             offset: '200%, 100, 200%, 200%',
@@ -163,21 +270,21 @@
             trigger: "hover"
             //width:'500%'
             //container: 'body'
-        });
-          $("#chapter2").popover({
+        });*/
+          /*$("#chapter2").popover({
 
             content:'奇怪?這裡是哪裡，這些明明就不是資工系該學的阿!請學習一些資工系不會用到的技能，帶主角度過難關',
             trigger: 'hover',
             offset: '200%, 100, 200%, 200%',
             title: '白日夢冒險',
 
-            });
-          $("#chapter3").popover({
+            });*/
+          /*$("#chapter3").popover({
             content:'使用主角單生20年學習到的所有技能，擊敗資工系的妖魔鬼怪',
             trigger: 'hover',
             offset: '200%, 100, 200%, 200%',
             title: '學園篇--終章',
-          });
+          });*/
           $("#bugs").popover({
             content:'有bug就接受吧，這個我不打算修喔!!',
             //trigger: 'focus',
@@ -185,6 +292,26 @@
             //title: '學園篇--序章',
             trigger: "hover"
           });
+          $('#leader').on('click', function () {
+          $('#show_leader').modal();
+          })
+
+          $('#chapter1').on('click', function () {
+          $('#show_chapter1').modal();
+          })
+
+           $('#chapter2').on('click', function () {
+          $('#show_chapter2').modal();
+          })
+
+            $('#chapter3').on('click', function () {
+          $('#show_chapter3').modal();
+          })
+
+            $('#how').on('click', function () {
+          $('#show_how').modal();
+          })
+
         });
 
         //layer js
