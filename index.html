@@ -134,9 +134,9 @@
         </li>
       </ul>
     </div>
-    <!--
-    <button id="func1" onclick="func1();" style="top:700px; position: absolute;" >初体验</button>
-    --> 
+    
+    <button class="1" id="lock" onclick="press();" style="top:700px; position: absolute;" >switch</button>
+     
     <!-- Button trigger modal -->
     <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="top:700px; position: absolute;">
     Launch demo modal
@@ -310,6 +310,21 @@
 
             $('#how').on('click', function () {
           $('#show_how').modal();
+          })
+
+            $('#lock').on('click', function () {
+              var key=document.getElementById("lock");
+              //console.log(key.className);
+              key.className=1-key.className;
+              //console.log(key.className);
+              //if(!key.className)
+              console.log(key.className);
+              if(key.className=='0')
+                $('#test').hide();
+              else
+                $('#test').show();
+              //else
+                //$('#test').animate();
           })
 
         });
@@ -629,7 +644,6 @@
 
          varying vec4 vColor;
          varying float z;
-
          uniform vec3 color;
 
          void main() {
@@ -772,25 +786,40 @@
          var positionUniforms;
          var velocityUniforms;
          var birdUniforms;
+         var lock=1;
+         
+         function press()
+         {
+          lock=1-lock;
+         }
 
-         init();
-         animate();
+         /*if(lock)
+         {
+          $('#test').hide();
+          console.log("test");
+         }*/
 
+           init();
+           animate();
+         
          function init() {
 
             container = document.createElement( 'div' );
+            //container.id='test';
             document.body.appendChild( container );
 
             camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
             camera.position.z = 350;
 
             scene = new THREE.Scene();
-            scene.background = new THREE.Color( 0xffffff );
+            scene.background = new THREE.Color( 0x000000 );
             scene.fog = new THREE.Fog( 0xffffff, 100, 1000 );
 
             renderer = new THREE.WebGLRenderer();
             renderer.setPixelRatio( window.devicePixelRatio );
             renderer.setSize( window.innerWidth, window.innerHeight );
+            //renderer.domElement.style.display='none';
+            renderer.domElement.id='test';
             container.appendChild( renderer.domElement );
 
             initComputeRenderer();
@@ -1002,6 +1031,7 @@
 
             requestAnimationFrame( animate );
 
+
             render();
             stats.update();
 
@@ -1026,7 +1056,6 @@
 
             mouseX = 10000;
             mouseY = 10000;
-
             gpuCompute.compute();
 
             birdUniforms.texturePosition.value = gpuCompute.getCurrentRenderTarget( positionVariable ).texture;
