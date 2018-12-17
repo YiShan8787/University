@@ -298,6 +298,8 @@ Scene_Title.prototype.drawGameTitle = function() {
     this._gameTitleSprite.bitmap.outlineWidth = 8;
     this._gameTitleSprite.bitmap.fontSize = 72;
     this._gameTitleSprite.bitmap.drawText(text, x, y, maxWidth, 48, 'center');
+    this._gameTitleSprite.bitmap.fontSize = 12;
+    this._gameTitleSprite.bitmap.drawText("edit by Hao-Yu",x,y*3.5,maxWidth*1.5,8,'center');
 };
 
 Scene_Title.prototype.centerSprite = function(sprite) {
