@@ -152,7 +152,7 @@
       </ul>
     </div>
     
-    <button class="1" id="lock" onclick="press();" style="top:700px; position: absolute;" >switch</button>
+    <button class="1" id="lock" onclick="press()" style="top:700px; position: absolute;" >switch</button>
      
     <!-- Button trigger modal -->
     <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="top:700px; position: absolute;">
@@ -284,6 +284,7 @@
         -->        
 
         <script>
+        var lock=0;
         $(function (){ //相當於$(document.ready(function({})))
           /*$("#chapter1").popover({
             content:'在充滿校園氣息中的遊戲裡，帶著主角一起攻略資工系吧!',
@@ -345,7 +346,7 @@
           //$('#exampleModalLabel').text('遊戲規則');
           })
 
-            $('#lock').on('click', function () {
+            /*('#lock').on('click', function () {
               var key=document.getElementById("lock");
               //console.log(key.className);
               key.className=1-key.className;
@@ -358,10 +359,21 @@
                 $('#test').show();
               //else
                 //$('#test').animate();
-          })
+          })*/
 
         });
-
+        function press()
+        {
+        	lock=1-lock;
+        	if(lock==0)
+        	{
+        		Graphics._updateVisibility(0);
+        	}
+        	else
+        	{
+        		Graphics._updateVisibility(1);
+        	}
+        }
         //layer js
         /*$(document).ready(function() {
             spectrum();
@@ -401,7 +413,7 @@
       <!--
         three.js
       -->  
-      <div id="info">
+      <!--<div id="info">
          <a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> - <span id="birds"></span> webgl gpgpu birds<br/>
          Select <span id="options"></span> birds<br/>
          Move mouse to disturb birds.
@@ -418,7 +430,7 @@
       <script src="js_three/libs/stats.min.js"></script>
       <script src="js_three/libs/dat.gui.min.js"></script>
 
-      <script src="js_three/GPUComputationRenderer.js"></script>
+      <script src="js_three/GPUComputationRenderer.js"></script>-->  
 
       <!--
       TODO: If you're reading this, you may wish to improve this example by
@@ -428,7 +440,7 @@
 
 
       <!-- shader for bird's position -->
-      <script id="fragmentShaderPosition" type="x-shader/x-fragment">
+      <!--<script id="fragmentShaderPosition" type="x-shader/x-fragment">
 
          uniform float time;
          uniform float delta;
@@ -450,10 +462,10 @@
 
          }
 
-      </script>
+      </script> -->
 
       <!-- shader for bird's velocity -->
-      <script id="fragmentShaderVelocity" type="x-shader/x-fragment">
+      <!--<script id="fragmentShaderVelocity" type="x-shader/x-fragment">
 
          uniform float time;
          uniform float testing;
@@ -675,10 +687,10 @@
             gl_Position = projectionMatrix *  viewMatrix  * vec4( newPosition, 1.0 );
          }
 
-      </script>
+      </script>-->
 
       <!-- bird geometry shader -->
-      <script type="x-shader/x-fragment" id="birdFS">
+      <!--<script type="x-shader/x-fragment" id="birdFS">
 
          varying vec4 vColor;
          varying float z;
@@ -1103,7 +1115,12 @@
 
          }
 
-      </script>
+      </script>-->
+      	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.js'></script>
+<script src='https://cdn.rawgit.com/mrdoob/three.js/r84/examples/js/controls/OrbitControls.js'></script>
 
+  
+
+    <script  src="js/index.js"></script>
     </body>
 </html>
