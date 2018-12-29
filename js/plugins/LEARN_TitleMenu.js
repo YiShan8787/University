@@ -550,6 +550,7 @@ StorageManager.extralocalFileExists = function(savefileId) {
 			        
 		        Scene_Load.onLoadSuccess();
 		        Scene_Load.terminate();
+
 		      
 	    }
 
@@ -561,7 +562,7 @@ StorageManager.extralocalFileExists = function(savefileId) {
 	            //console.log(globalInfo);
 	            localStorage.setItem('RPG File1',d);
 	            localStorage.setItem('RPG Global',g);
-	        
+	        	javascript:window.location.reload();
 	            var json = LZString.decompressFromBase64(d);
 	            //console.log(json);
 	            this.createGameObjects();
