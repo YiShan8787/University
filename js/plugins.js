@@ -8,5 +8,6 @@ var $plugins =
 {"name":"MOG_EventSensor","status":false,"description":"(v1.1) Sistema de distância de eventos.","parameters":{"Self Switch Key":"D"}},
 {"name":"MOG_PickupThrow","status":true,"description":"(v1.4) Sistema de arremessar os eventos.","parameters":{"Character Height":"22","Character Pose":"true","Hold Direction":"true","Hold Direction Button":"pagedown","Sound File":"Jump1"}},
 {"name":"Equip Core","status":true,"description":"Allows for the equipment system to be more flexible to\r\nallow for unique equipment slots per class.","parameters":{"---General---":"","Text Align":"center","Finish Command":"Finish","Remove Text":"Remove","Remove Icon":"16","Empty Text":"<Empty>","Empty Icon":"16","---Rules---":"","Non-Removable Types":"1","Non-Optimized Types":"5"}},
-{"name":"LoadingExtend","status":true,"description":"LoadingExtendPlugin","parameters":{"ImageColumn":"1","ImageRow":"10","ShowingType":"2","AnimationInterval":"30","XPosition":"","YPosition":"","WaitingFrames":"20","NoFlashing":"OFF"}}
+{"name":"LoadingExtend","status":true,"description":"LoadingExtendPlugin","parameters":{"ImageColumn":"1","ImageRow":"10","ShowingType":"2","AnimationInterval":"30","XPosition":"","YPosition":"","WaitingFrames":"20","NoFlashing":"OFF"}},
+{"name":"LEARN_TitleMenu","status":true,"description":"","parameters":{}}
 ];

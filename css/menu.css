@@ -16,6 +16,8 @@
   list-style: none;
 }
 
+
+
 /* menu container */
 .nav,
 input {
@@ -28,6 +30,7 @@ input {
   display: inline-block;
   position: relative;
   z-index: 500;
+  
 }
 
 /* menu list */
