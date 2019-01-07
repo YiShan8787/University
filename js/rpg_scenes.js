@@ -191,7 +191,7 @@ Scene_Boot.prototype.isGameFontLoaded = function() {
         return true;
     } else {
         var elapsed = Date.now() - this._startDate;
-        if (elapsed >= 20000) {
+        if (elapsed >= 40000) { //origin 20000
             throw new Error('Failed to load GameFont');
         }
     }
