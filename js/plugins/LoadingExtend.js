@@ -1,126 +1,14 @@
 //=============================================================================
 // LoadingExtend.js
 // ----------------------------------------------------------------------------
-// Copyright (c) 2015-2017 Triacontane
-// This software is released under the MIT License.
-// http://opensource.org/licenses/mit-license.php
+// 
 // ----------------------------------------------------------------------------
-// Version
-// 1.0.0 2017/06/04 初版
-// ----------------------------------------------------------------------------
-// [Blog]   : https://triacontane.blogspot.jp/
-// [Twitter]: https://twitter.com/triacontane/
-// [GitHub] : https://github.com/triacontane/
+
 //=============================================================================
 
 /*:
  * @plugindesc LoadingExtendPlugin
- * @author triacontane
- *
- * @param ImageColumn
- * @desc system/Loading.pngをスプライトシート化する場合の横方向のセル数です。
- * @default 1
- *
- * @param ImageRow
- * @desc system/Loading.pngをスプライトシート化する場合の縦方向のセル数です。
- * @default 1
- *
- * @param ShowingType
- * @desc ローディング画像の表示タイプです。(0通常、1:ランダム、2:アニメーション)
- * @default 0
- *
- * @param AnimationInterval
- * @desc 表示タイプが「アニメーション」の場合は表示間隔です。
- * @default 30
- *
- * @param XPosition
- * @desc ローディング画像の表示位置X座標です。中心位置を指定します。制御文字が使えます。
- * @default
- *
- * @param YPosition
- * @desc ローディング画像の表示位置Y座標です。中心位置を指定します。制御文字が使えます。
- * @default
- *
- * @param WaitingFrames
- * @desc ロード開始から画像表示までの待機フレーム数です。
- * @default 20
- *
- * @param NoFlashing
- * @desc ローディング画像が点滅しなくなります。
- * @default OFF
- *
- * @help ロード中画像「Now Loading」の表示方法を以下の通り拡張します。
- *
- * ・表示方法拡張（Loading.pngを縦横に分割して表示(スプライトシート形式)します）
- * ランダム表示　　　：複数の画像からランダムで選択して表示します。
- * アニメーション表示：画像を順番にアニメーション表示します。
- *
- * ・表示位置調整
- * 表示座標（中心点を指定）を調整することができます。
- *
- * ・その他
- * 画像の点滅を無効化したりロード中画像が表示されるまでのフレーム数を
- * 指定したりできます。
- *
- * このプラグインにはプラグインコマンドはありません。
- *
- * This plugin is released under the MIT License.
- */
-/*:ja
- * @plugindesc ロード中画像拡張プラグイン
- * @author トリアコンタン
- *
- * @param イメージ列数
- * @desc system/Loading.pngをスプライトシート化する場合の横方向のセル数です。
- * @default 1
- *
- * @param イメージ行数
- * @desc system/Loading.pngをスプライトシート化する場合の縦方向のセル数です。
- * @default 1
- *
- * @param 表示タイプ
- * @desc ローディング画像の表示タイプです。(0通常、1:ランダム、2:アニメーション)
- * @default 0
- *
- * @param アニメーション間隔
- * @desc 表示タイプが「アニメーション」の場合は表示間隔です。
- * @default 30
- *
- * @param 表示位置X座標
- * @desc ローディング画像の表示位置X座標です。中心位置を指定します。制御文字が使えます。
- * @default
- *
- * @param 表示位置Y座標
- * @desc ローディング画像の表示位置Y座標です。中心位置を指定します。制御文字が使えます。
- * @default
- *
- * @param 待機フレーム数
- * @desc ロード開始から画像表示までの待機フレーム数です。
- * @default 20
- *
- * @param 点滅なし
- * @desc ローディング画像が点滅しなくなります。
- * @default OFF
- *
- * @help ロード中画像「Now Loading」の表示方法を以下の通り拡張します。
- *
- * ・表示方法拡張（Loading.pngを縦横に分割して表示(スプライトシート形式)します）
- * ランダム表示　　　：複数の画像からランダムで選択して表示します。
- * アニメーション表示：画像を順番にアニメーション表示します。
- *
- * ・表示位置調整
- * 表示座標（中心点を指定）を調整することができます。
- *
- * ・その他
- * 画像の点滅を無効化したりロード中画像が表示されるまでのフレーム数を
- * 指定したりできます。
- *
- * このプラグインにはプラグインコマンドはありません。
- *
- * 利用規約：
- *  作者に無断で改変、再配布が可能で、利用形態（商用、18禁利用等）
- *  についても制限はありません。
- *  このプラグインはもうあなたのものです。
+ * 
  */
 
 (function() {
@@ -128,8 +16,7 @@
     var pluginName = 'LoadingExtend';
 
     //=============================================================================
-    // ローカル関数
-    //  プラグインパラメータやプラグインコマンドパラメータの整形やチェックをします
+    // 
     //=============================================================================
     var getParamString = function(paramNames) {
         if (!Array.isArray(paramNames)) paramNames = [paramNames];
@@ -169,21 +56,21 @@
     };
 
     //=============================================================================
-    // パラメータの取得と整形
+    // 
     //=============================================================================
     var param               = {};
-    param.imageColumn       = getParamNumber(['ImageColumn', 'イメージ列数'], 1);
-    param.imageRow          = getParamNumber(['ImageRow', 'イメージ行数'], 1);
-    param.showingType       = getParamNumber(['ShowingType', '表示タイプ'], 0);
-    param.animationInterval = getParamNumber(['AnimationInterval', 'アニメーション間隔'], 0);
+    param.imageColumn       = getParamNumber(['ImageColumn', '列数'], 1);
+    param.imageRow          = getParamNumber(['ImageRow', '行数'], 1);
+    param.showingType       = getParamNumber(['ShowingType', '表示'], 0);
+    param.animationInterval = getParamNumber(['AnimationInterval', '間隔'], 0);
     param.xPosition         = getParamString(['XPosition', '表示位置X座標']);
     param.yPosition         = getParamString(['YPosition', '表示位置Y座標']);
-    param.waitingFrames     = getParamNumber(['WaitingFrames', '待機フレーム数'], 1) || 20;
-    param.noFlashing        = getParamBoolean(['NoFlashing', '点滅なし']);
+    param.waitingFrames     = getParamNumber(['WaitingFrames', '待機数'], 1) || 20;
+    param.noFlashing        = getParamBoolean(['NoFlashing', '點滅']);
 
     //=============================================================================
     // Graphics
-    //  ロードディング画像の表示仕様を拡張します。
+    //  
     //=============================================================================
     var _Graphics_initialize = Graphics.initialize;
     Graphics.initialize      = function(width, height, type) {
